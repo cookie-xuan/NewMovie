@@ -1,0 +1,92 @@
+@import (inline) "../css/bootstrap.css";
+@global-blue: #6699ff;
+@global-red:#ff6666;
+@global-lightgray: #f8f8f8;
+@global-gray: #555;
+@font-gray: #555;
+body {
+    font: 14px/1.5  "Microsoft Yahei";
+    background: url(../img/bg.jpg) repeat;
+    padding-top: 55px;
+}
+input.form-control{
+    &:focus{
+        box-shadow: none !important;
+    }
+}
+button.btn{
+    &:hover{
+        background-color:#fff;
+    }
+}
+#my-nav {
+    border-bottom: 5px solid @global-blue;
+    margin-bottom: 0;
+    .navbar-brand{
+        transition:all 1s;
+        color: @global-blue;
+    }
+    .navbar-nav li>a{
+        transition:all 1s;
+        &:hover{
+            color: @global-blue;
+        }
+    }
+}
+#my-banner{
+    margin:0 -15px 0 -15px;
+    img{
+        width: 100%;
+    }
+}
+.index-section{
+    margin: 30px auto;
+    background: @global-lightgray; 
+    border-radius: 3px;
+    border:1px solid #ccc;
+}
+.index-section-title{
+    font-size: 20px;
+    color:@global-gray;
+    &:after{
+        content:" ";
+        display: block;
+        height: 2px;width: 80px;
+        background: @global-blue;
+        margin-top: 10px;
+    }
+    small{
+        color:lighten(@global-gray,5%);
+    }
+}
+.section-film{
+    padding:0 10px;
+}
+.index-item-box{
+    padding:0 6px;
+    transition:all 1s;
+    .thumbnail{
+        border:none;
+        border-radius: 0;
+        padding: 0;
+        border-bottom: 5px solid @global-red;
+    }
+    &:hover{
+    }
+}
+.index-logo-hr {
+    img{
+        display: block;
+        margin:0 auto;
+    }
+}
+.footer {
+    width: 100%;
+    background: @global-lightgray;
+    border-top: 2px solid @global-blue;
+    line-height: 35px;
+    text-align: center;
+    //position: absolute;
+    //bottom: 0;
+    color: @font-gray;
+}
