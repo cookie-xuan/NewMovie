@@ -6389,7 +6389,7 @@ button.btn:hover {
   width: 100%;
 }
 .index-section {
-  margin: 30px auto;
+  margin-top: 30px;
   background: #f8f8f8;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -6412,6 +6412,55 @@ button.btn:hover {
 .section-film {
   padding: 0 10px;
 }
+ul.index-film-new {
+  list-style: none;
+  padding: 0;
+}
+ul.index-film-new li {
+  margin-top: 8px;
+  overflow: hidden;
+}
+ul.index-film-new li a {
+  border-left: 3px solid #9966ff;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  width: 100%;
+  color: #555555;
+  transition: margin-left 0.3s linear;
+}
+ul.index-film-new li a:hover {
+  margin-left: 15px;
+  text-decoration: none;
+}
+ul.index-film-new li a span.time {
+  font-style: italic;
+  padding: 0 10px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  ul.index-film-new li {
+    margin-top: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  ul.index-film-new li {
+    margin-top: 10px;
+  }
+}
+.index-link-film {
+  line-height: 25px;
+  margin-bottom: 10px;
+  display: block;
+  color: #9966ff;
+  text-align: center;
+  border: 1px solid #9966ff;
+  transition: all 0.5s linear;
+}
+.index-link-film:hover {
+  text-decoration: none;
+  background: #9966ff;
+  color: #fff;
+}
 .index-item-box {
   padding: 0 6px;
   transition: all 1s;
@@ -6422,11 +6471,15 @@ button.btn:hover {
   padding: 0;
   border-bottom: 5px solid #ff6666;
 }
+.index-logo-hr {
+  margin-top: 30px;
+}
 .index-logo-hr img {
   display: block;
   margin: 0 auto;
 }
 .footer {
+  margin-top: 30px;
   width: 100%;
   background: #f8f8f8;
   border-top: 2px solid #6699ff;

@@ -1,6 +1,7 @@
 @import (inline) "../css/bootstrap.css";
 @global-blue: #6699ff;
 @global-red:#ff6666;
+@global-purple:#9966ff;
 @global-lightgray: #f8f8f8;
 @global-gray: #555;
 @font-gray: #555;
@@ -40,7 +41,8 @@ button.btn{
     }
 }
 .index-section{
-    margin: 30px auto;
+    //margin: 30px auto;
+    margin-top:30px;
     background: @global-lightgray; 
     border-radius: 3px;
     border:1px solid #ccc;
@@ -62,6 +64,52 @@ button.btn{
 .section-film{
     padding:0 10px;
 }
+ul.index-film-new{
+    list-style:none;
+    padding: 0;
+    li{
+        margin-top:8px;
+        overflow: hidden;
+        a{
+            border-left: 3px solid @global-purple;
+            display: block;
+            height: 25px;line-height:25px;width: 100%;
+            color:@global-gray;
+            transition: margin-left 0.3s linear;
+
+            &:hover{
+                margin-left:15px;
+                text-decoration: none;
+            }
+            span.time{
+                font-style: italic;
+                padding: 0 10px;
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px){
+            margin-top: 5px;
+        }
+        @media (min-width: 1200px) {
+            margin-top: 10px;
+        }
+    }
+    
+}
+.index-link-film{
+    line-height: 25px;
+    margin-bottom: 10px;
+    display: block;
+    color: @global-purple;
+    text-align: center;
+    border: 1px solid @global-purple;
+    transition:all 0.5s linear;
+    &:hover{
+        text-decoration: none;
+        background: @global-purple;
+        color: #fff;
+    }
+}
 .index-item-box{
     padding:0 6px;
     transition:all 1s;
@@ -75,12 +123,14 @@ button.btn{
     }
 }
 .index-logo-hr {
+    margin-top:30px;
     img{
         display: block;
         margin:0 auto;
     }
 }
 .footer {
+    margin-top:30px;
     width: 100%;
     background: @global-lightgray;
     border-top: 2px solid @global-blue;
