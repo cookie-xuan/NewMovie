@@ -47,6 +47,9 @@ button.btn{
     border-radius: 3px;
     border:1px solid #ccc;
 }
+.index-tabsection{
+    margin-top:30px;
+}
 .index-section-title{
     font-size: 20px;
     color:@global-gray;
@@ -64,16 +67,19 @@ button.btn{
 .section-film{
     padding:0 10px;
 }
-ul.index-film-new{
+ul.index-film-new,ul.index-news-new{
     list-style:none;
     padding: 0;
+    margin-bottom:5px;
     li{
         margin-top:8px;
         overflow: hidden;
         a{
+            height: 25px;line-height:25px;width: 100%;
+            padding-left: 10px;
             border-left: 3px solid @global-purple;
             display: block;
-            height: 25px;line-height:25px;width: 100%;
+            
             color:@global-gray;
             transition: margin-left 0.3s linear;
 
@@ -83,7 +89,10 @@ ul.index-film-new{
             }
             span.time{
                 font-style: italic;
-                padding: 0 10px;
+                padding: 0 10px 0 0;
+                @media (max-width: 480px){
+                    display: none;
+                }
             }
         }
 
@@ -96,7 +105,7 @@ ul.index-film-new{
     }
     
 }
-.index-link-film{
+.index-link-film,.index-link-news{
     line-height: 25px;
     margin-bottom: 10px;
     display: block;
@@ -128,6 +137,44 @@ ul.index-film-new{
         display: block;
         margin:0 auto;
     }
+}
+.index-tabsection-tabs{
+    border-color: #ccc;
+    li.active{
+        a{
+            background: @global-lightgray !important;
+            //border-color:#ccc;
+            border: 1px solid #ccc !important;
+            border-bottom-color: transparent !important;
+            &:hover{
+                background: @global-lightgray;
+            }
+            h2{
+                border-left: 2px solid @global-blue;
+                padding-left: 10px; 
+            }
+        }
+    }
+    li{
+        a{
+            transition:all 0.5s linear;
+            h2{
+                margin:0;
+
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.index-tabsection-pane{
+    background: @global-lightgray;
+
+    border-radius: 0 3px 3px 3px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #ccc;
 }
 .footer {
     margin-top:30px;

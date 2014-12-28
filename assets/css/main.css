@@ -6394,6 +6394,9 @@ button.btn:hover {
   border-radius: 3px;
   border: 1px solid #ccc;
 }
+.index-tabsection {
+  margin-top: 30px;
+}
 .index-section-title {
   font-size: 20px;
   color: #555555;
@@ -6412,42 +6415,58 @@ button.btn:hover {
 .section-film {
   padding: 0 10px;
 }
-ul.index-film-new {
+ul.index-film-new,
+ul.index-news-new {
   list-style: none;
   padding: 0;
+  margin-bottom: 5px;
 }
-ul.index-film-new li {
+ul.index-film-new li,
+ul.index-news-new li {
   margin-top: 8px;
   overflow: hidden;
 }
-ul.index-film-new li a {
-  border-left: 3px solid #9966ff;
-  display: block;
+ul.index-film-new li a,
+ul.index-news-new li a {
   height: 25px;
   line-height: 25px;
   width: 100%;
+  padding-left: 10px;
+  border-left: 3px solid #9966ff;
+  display: block;
   color: #555555;
   transition: margin-left 0.3s linear;
 }
-ul.index-film-new li a:hover {
+ul.index-film-new li a:hover,
+ul.index-news-new li a:hover {
   margin-left: 15px;
   text-decoration: none;
 }
-ul.index-film-new li a span.time {
+ul.index-film-new li a span.time,
+ul.index-news-new li a span.time {
   font-style: italic;
-  padding: 0 10px;
+  padding: 0 10px 0 0;
+}
+@media (max-width: 480px) {
+  ul.index-film-new li a span.time,
+  ul.index-news-new li a span.time {
+    display: none;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  ul.index-film-new li {
+  ul.index-film-new li,
+  ul.index-news-new li {
     margin-top: 5px;
   }
 }
 @media (min-width: 1200px) {
-  ul.index-film-new li {
+  ul.index-film-new li,
+  ul.index-news-new li {
     margin-top: 10px;
   }
 }
-.index-link-film {
+.index-link-film,
+.index-link-news {
   line-height: 25px;
   margin-bottom: 10px;
   display: block;
@@ -6456,7 +6475,8 @@ ul.index-film-new li a span.time {
   border: 1px solid #9966ff;
   transition: all 0.5s linear;
 }
-.index-link-film:hover {
+.index-link-film:hover,
+.index-link-news:hover {
   text-decoration: none;
   background: #9966ff;
   color: #fff;
@@ -6477,6 +6497,37 @@ ul.index-film-new li a span.time {
 .index-logo-hr img {
   display: block;
   margin: 0 auto;
+}
+.index-tabsection-tabs {
+  border-color: #ccc;
+}
+.index-tabsection-tabs li.active a {
+  background: #f8f8f8 !important;
+  border: 1px solid #ccc !important;
+  border-bottom-color: transparent !important;
+}
+.index-tabsection-tabs li.active a:hover {
+  background: #f8f8f8;
+}
+.index-tabsection-tabs li.active a h2 {
+  border-left: 2px solid #6699ff;
+  padding-left: 10px;
+}
+.index-tabsection-tabs li a {
+  transition: all 0.5s linear;
+}
+.index-tabsection-tabs li a h2 {
+  margin: 0;
+}
+.index-tabsection-tabs li a h2:after {
+  display: none;
+}
+.index-tabsection-pane {
+  background: #f8f8f8;
+  border-radius: 0 3px 3px 3px;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #ccc;
 }
 .footer {
   margin-top: 30px;
