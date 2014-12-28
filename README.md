@@ -1,5 +1,5 @@
 
-光华园电影网改版2015![GHY](dist/img/logo.png)
+![GHY](dist/img/logo.png)2015电影网改版
 ========================
 
 #####1.Less Grunt
