@@ -5691,10 +5691,10 @@ button.close {
   left: 0;
   z-index: 1060;
   display: none;
-  max-width: 180px;
+  max-width: 360px;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.42857143;
+  line-height: 1.8;
   text-align: left;
   background-color: #f8f8f8;
   background-clip: padding-box;
@@ -6320,6 +6320,11 @@ body {
   font: 14px/1.5 "Microsoft Yahei";
   background: #f1f1f1;
 }
+@media (max-width: 991px) {
+  body {
+    padding-top: 50px;
+  }
+}
 input.form-control:focus {
   box-shadow: none !important;
 }
@@ -6498,6 +6503,11 @@ fieldset[disabled] #my-nav .btn-link:focus {
 }
 #my-banner {
   margin: 0 -15px 0 -15px;
+}
+@media (max-width: 767px) {
+  #my-banner {
+    display: none !important;
+  }
 }
 #my-banner img {
   width: 100%;

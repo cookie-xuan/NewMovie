@@ -4,7 +4,10 @@
 body {
     font: 14px/1.5  "Microsoft Yahei";
     background: #f1f1f1;
-    //padding-top: 50px;
+    @media (max-width:@screen-sm-max) {
+        padding-top: 50px;
+    }
+    
 }
 input.form-control {
     &:focus {
@@ -45,6 +48,7 @@ button.btn {
     }
 }
 #my-banner {
+    .hidden-xs;
     margin: 0 -15px 0 -15px;
     img {
         width: 100%;
