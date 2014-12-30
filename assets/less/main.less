@@ -1,6 +1,6 @@
 @import (less) "./bootstrap.less";
 
-
+//==============global less==============
 body {
     font: 14px/1.5  "Microsoft Yahei";
     background: #f1f1f1;
@@ -26,6 +26,7 @@ button.btn {
         width: 90%;
     }
 }
+//==============nav less==============
 #my-nav {
     .navbar;
     .navbar-inverse;
@@ -47,154 +48,8 @@ button.btn {
         }
     }
 }
-#my-banner {
-    .hidden-xs;
-    margin: 0 -15px 0 -15px;
-    img {
-        width: 100%;
-    }
-}
-.index-section {
-    margin-top: 30px;
-    background: @global-lightgray;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-.index-section-title {
-    font-size: 20px;
-    color: @global-gray;
-    &:after {
-        content: " ";
-        display: block;
-        height: 2px;
-        width: 80px;
-        background: @global-blue;
-        margin-top: 10px;
-    }
-    small {
-        color: lighten(@global-gray, 5%);
-    }
-}
-.index-film-box, .index-tv-box {
-    padding: 0 10px;
-}
-.index-item-box {
-    //col-md-2 col-sm-2 col-xs-4
-    .make-md-column(2);
-    .make-sm-column(2);
-    .make-xs-column(4);
-    padding: 0 6px;
-
-    transition: all 1s;
-    a.item-link {
-        border-radius: 0;
-        border-color:  @global-blue;
-        border-width: 0px 0px 5px 0px !important;
-        border-style: solid;
-
-        background: #000;
-        padding: 0;margin-bottom:15px;display: block;
-        cursor: pointer;
-        position:relative;
-        overflow: hidden;
-
-        
-        img{
-            //transition:opacity .5s;
-            .img-responsive;
-            &:hover{
-                opacity: 0.6;
-            }
-        }
-        
-        
-
-    }
-    // .box-describe{
-    //     width:100%;
-    //     background: @global-lightgray;
-    //     position:absolute;bottom:-25px;z-index: 10;
-    //     opacity: 0.8;transition:all .5s linear;
-    //     p{
-    //         line-height: 25px;text-align: center;
-    //         margin-bottom: 0;
-    //     }
-            
-    // }
-    // &:hover {
-    //     .box-describe{
-    //         bottom: 0px;
-    //     }
-        
-    // }
-
-}
-//今日更新列表
-ul.index-film-new, ul.index-news-new {
-    list-style: none;
-    padding: 0 0 20px 0;
-    margin-bottom: 5px;
-    .clearfix;
-    li {
-        margin-top: 8px;
-        overflow: hidden;
-        float: left;
-        width: 50%;
-        @media (min-width:@screen-md-min) {
-            width: 100%;
-        }
-        a {
-            text-decoration: none;
-            height: 25px;
-            line-height: 25px;
-            padding-left: 10px;
-            border-left: 3px solid @global-blue;
-            display: block;
-            color: @global-gray;
-            transition: margin-left 0.3s linear;
-            &:hover {
-                margin-left: 15px;
-            }
-            span.time {
-                font-style: italic;
-                padding: 0 10px 0 0;
-                @media (max-width:480px) {
-                    display: none;
-                }
-            }
-        }
-        //列表自适应
-        margin-top: 12px;
-        @media (min-width:@screen-md-min) and (max-width:@screen-md-max) {
-            margin-top: 6px;
-            a {
-                font-size: 0.9em;
-            }
-        }
-        @media (min-width:@screen-lg-min) {
-            margin-top: 12px;
-            a {
-                font-size: 1em;
-            }
-        }
-    }
-}
-.index-collection-section {
-    margin-left: -15px;
-    margin-right: -15px;
-    padding: 0 15px;
-}
-.index-online-section, .index-tv-section {
-    margin-right: -15px;
-    padding: 0 15px;
-}
-.index-logo-hr {
-    margin-top: 30px;
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-}
+@import (less) "./my-index.less";
+//==============footer==============
 .footer {
     margin-top: 30px;
     width: 100%;
